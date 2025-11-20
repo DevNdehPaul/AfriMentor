@@ -1,0 +1,96 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+  <title>Features | AfriMentor</title> 
+  <link rel="stylesheet" href="{{ url_for('static', filename='features.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='nav.css') }}"> 
+  <link rel="stylesheet" href="../static/Bootstrap/css/bootstrap.css">
+</head> 
+<body>
+  <nav class="navbar fixed-top"> 
+    <div class="logo">
+   🌍
+   AfriMentor</div> 
+    <ul class="nav-links" style="list-style: none;"> 
+      <li><a href="/">Home</a></li> 
+      <li><a href="/features">Features</a></li>
+      <li><a href="/about">About Us</a></li>  
+      <li><a href="/blog">Blog</a></li> 
+    </ul> 
+    <div class="hamburger"> 
+      <span></span> 
+      <span></span> 
+      <span></span> 
+    </div> 
+  </nav> 
+  <header><br><br><br>  
+    <h1>AfriMentor Features</h1> 
+    <p>Powerful tools designed for learning without limits</p> 
+  </header> 
+ 
+  <main> 
+    <section class="feature"> 
+      <div class="icon">
+ 📚
+ </div> 
+      <div class="content"> 
+        <h2>AI Tutor</h2> 
+        <p>Personalized help with math, science, coding, and more—tailored to each learner’s 
+pace. Works offline by storing lessons and answers locally.</p><br>
+<button class="bg-primary btn" style="color: white;" onclick="location.href='/ai-tutor'">Explore tool</button>
+      </div> 
+    </section> 
+ 
+    <section class="feature"> 
+      <div class="icon">
+ 🧭
+ </div> 
+      <div class="content"> 
+        <h2>Career Navigator</h2> 
+        <p>Guides youth through job options, vocational training, and entrepreneurship—rooted in 
+African economies and real-world opportunities.</p><br>
+<button class="bg-primary btn" style="color: white;" onclick="location.href='/career'">Explore tool</button>
+      </div> 
+    </section> 
+ 
+    <section class="feature"> 
+      <div class="icon">
+ 🗣
+ </div> 
+      <div class="content"> 
+        <h2>Language Bridge</h2> 
+        <p>Breaks language barriers by translating lessons into Yoruba, Swahili, Fulfulde, and 
+more—making education truly inclusive.</p><br>
+<button class="bg-primary btn" style="color: white;" onclick="location.href='/translate'">Explore tool</button> 
+      </div> 
+    </section> 
+
+ 
+    <section class="feature"> 
+      <div class="icon">
+ 📡
+ </div> 
+      <div class="content"> 
+        <h2>Community Sync</h2> 
+        <p>When one device connects to the internet, it shares updates with nearby devices via 
+Bluetooth or Wi-Fi Direct—spreading knowledge across the community.</p><br>
+<button class="bg-primary btn" style="color: white;" onclick="location.href='/community'">Explore tool</button> 
+      </div> 
+    </section> 
+  </main> 
+ 
+  <br><br><br><footer class="fixed-bottom"> 
+    <p>&copy; 2025 AfriMentor. Built for Africa, by Africa.</p> 
+  </footer> 
+</body> 
+</html>
+<script>
+  const hamburger = document.querySelector('.hamburger'); 
+const navLinks = document.querySelector('.nav-links'); 
+hamburger.addEventListener('click', () => { 
+navLinks.classList.toggle('active'); 
+}); 
+</script>

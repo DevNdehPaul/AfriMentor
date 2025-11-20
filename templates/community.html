@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>🌍 Community Knowledge Hub</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='nav.css') }}"> 
+  <link rel="stylesheet" href="../static/Bootstrap/css/bootstrap.css">
+  <script src="{{ url_for('static', filename='sync.js') }}"></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; background: #f4f6f8; }
+    h1 { color: #004d40; }
+    .card { background: white; padding: 16px; border-radius: 10px;
+            margin-bottom: 20px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);}
+    button { padding: 10px 16px; background: #00796b; color: white; border: none;
+             border-radius: 6px; cursor: pointer; }
+    button:hover { background: #009688; }
+    .file-list { margin-top: 10px; }
+    footer { 
+    background: #2e8b57; 
+    color: white; 
+    text-align: center; 
+    padding: 1rem; 
+  } 
+  </style>
+</head>
+<body>
+    <nav class="navbar fixed-top"> 
+    <div class="logo">
+   🌍
+   AfriMentor</div> 
+    <ul class="nav-links" style="list-style: none;"> 
+      <li><a href="/">Home</a></li> 
+      <li><a href="/features">Features</a></li>
+      <li><a href="/about">About Us</a></li>  
+      <li><a href="/blog">Blog</a></li> 
+    </ul> 
+    <div class="hamburger"> 
+      <span></span> 
+      <span></span> 
+      <span></span> 
+    </div> 
+  </nav> 
+  <h1 style="text-align: center;"><br><br><br> 🌍 Community Knowledge Hub</h1>
+  <p style="text-align: center;">Anyone who connects to the internet can fetch new updates, and share them with others offline.</p><br><br>
+
+  <div class="card">
+    <h3>Upload New Content</h3>
+    <form id="uploadForm" enctype="multipart/form-data">
+      <input type="file" name="file" required>
+      <button type="submit">Upload</button>
+    </form>
+  </div>
+
+  <div class="card">
+    <h3>Fetch Updates from Cloud</h3><br>
+    <button onclick="fetchCloud()" style="width: 20%;">🌐 Fetch Now</button>
+  </div>
+
+  <div class="card">
+    <h3>Available Files</h3>
+    <ul id="fileList" class="file-list"></ul>
+  </div>
+</body>
+<br><br><br> <footer class="fixed-bottom"> 
+    <p>&copy; 2025 AfriMentor. Built for Africa, by Africa.</p> 
+  </footer> 
+</html>
+<script>
+    const hamburger = document.querySelector('.hamburger'); 
+  const navLinks = document.querySelector('.nav-links'); 
+  hamburger.addEventListener('click', () => { 
+  navLinks.classList.toggle('active'); 
+  });
+  function startVoice() {
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SpeechRecognition){
+      alert("not supported")
+      return;
+    }
+    const recognition = new SpeechRecognition();
+    recognition.lang = 'en-US';
+    recognition.onresult = function(event) {
+      document.getElementById('question').value = event.results[0][0].transcript;
+    };
+    recognition.start();
+  } 
+  </script> 

@@ -1,0 +1,128 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+  <title>AfriMentor</title> 
+  <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}"> 
+  <link rel="stylesheet" href="{{ url_for('static', filename='nav.css') }}">
+  <link rel="stylesheet" href="../static/Bootstrap/css/bootstrap.css">
+</head> 
+<body> 
+  <nav class="navbar fixed-top"> 
+    <div class="logo">
+   🌍
+   AfriMentor</div> 
+    <ul class="nav-links" style="list-style: none;"> 
+      <li><a href="/">Home</a></li> 
+      <li><a href="/features">Features</a></li>
+      <li><a href="/about">About Us</a></li>  
+      <li><a href="/blog">Blog</a></li> 
+    </ul> 
+    <div class="hamburger"> 
+      <span></span> 
+      <span></span> 
+      <span></span> 
+    </div> 
+  </nav>
+  <header><br><br><br> 
+    <h1 style="text-align: center;">
+ 🌍
+ AfriMentor</h1> 
+    <p style="text-align: center;">AI-Powered Learning for the Unconnected</p> 
+  </header> 
+  <div class="container"><br><br><br>
+  <div class="row">
+    <div class="col-md-6"><img src="../static/Images/e-learning-1-sito-EN.jpg" alt="" class="img-fluid rounded">
+    </div>
+    <div class="col-md-6"><br><br><br>
+        <h2 style="text-align: center;">
+     🚀
+     Our Mission</h2> 
+        <p style="text-align: center;">To empower every student, no matter where they live with the tools to learn, grow, and 
+    thrive.</p> 
+    </div>
+  </div><br>
+  <section class="features"> 
+    <h2 style="text-align: center;">
+ 🧠
+ What Makes AfriMentor Different?</h2> <br><br>
+    <div class="row">
+      <div class="feature col-md-4"> 
+        <h3 style="text-align: center;">
+   📚
+   AI Tutor</h3> 
+        <p style="text-align: center;">Personalized help with math, science, coding even offline.</p> 
+      </div> 
+      <div class="feature col-md-4"> 
+        <h3 style="text-align: center;">
+   🧭
+   Career Navigator</h3> 
+        <p style="text-align: center;">Explore job paths and entrepreneurship tailored to African economies.</p> 
+      </div> 
+      <div class="feature col-md-4"> 
+        <h3 style="text-align: center;">
+   🗣
+   Language Bridge</h3> 
+        <p style="text-align: center;">Learn in your language e.g Yoruba, Swahili, Fulfulde, and more.</p> 
+      </div> 
+    </div>
+  </section> 
+    <section class="impact"> 
+      <h2 style="text-align: center;">
+   🌱
+   Real Impact</h2> 
+      <p style="text-align: center;">Imagine a student in rural Cameroon solving algebra problems with AI guidance. A young 
+  entrepreneur in Kenya discovering local business ideas. AfriMentor isn’t just a tool—it’s a 
+  movement.</p> 
+    </section> 
+  
+    <section class="tech"> 
+      <h2 style="text-align: center;">
+   🔌
+   Built for the Real World</h2>
+      <ul> 
+        <li>Offline-first architecture using Python + SQLite</li> 
+        <li>Runs on Android & Raspberry Pi</li> 
+        <li>Bluetooth & Wi-Fi Direct syncing</li> 
+        <li>Voice input & text-to-speech</li> 
+        <li>Community-generated content</li> 
+      </ul> 
+    </section> 
+   
+   
+    <section class="cta"> 
+      <h2 style="text-align: center;">
+   🤝
+   Join the Mission</h2> 
+      <p>Whether you're an educator, developer, donor, or community leader—you can help shape 
+  the future of learning in Africa.</p>
+      <ul> 
+        <li>
+   🔧
+   Build with us</li> 
+        <li>
+   💬
+   Translate with us</li> 
+        <li>
+   📊
+   Pilot with us</li> 
+        <li>
+   💖
+   Donate to expand access</li> 
+      </ul> 
+    </section> 
+   
+  </div>
+  <br><br><br> <footer class="fixed-bottom"> 
+    <p style="text-align: center;">&copy; 2025 AfriMentor. Built for Africa, by Africa.</p> 
+  </footer> 
+</body> 
+</html>
+<script>
+  const hamburger = document.querySelector('.hamburger'); 
+const navLinks = document.querySelector('.nav-links'); 
+hamburger.addEventListener('click', () => { 
+navLinks.classList.toggle('active'); 
+}); 
+</script>

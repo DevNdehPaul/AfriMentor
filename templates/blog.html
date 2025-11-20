@@ -1,0 +1,79 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+  <title>AfriMentor Blog</title> 
+  <link rel="stylesheet" href="{{ url_for('static', filename='blog.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='nav.css') }}">
+  <link rel="stylesheet" href="../static/Bootstrap/css/bootstrap.css"> 
+</head> 
+<body>
+    <nav class="navbar fixed-top"> 
+        <div class="logo">
+       🌍
+       AfriMentor</div> 
+        <ul class="nav-links" style="list-style: none;"> 
+          <li><a href="/">Home</a></li> 
+          <li><a href="/features">Features</a></li>
+          <li><a href="/about">About Us</a></li>  
+          <li><a href="/blog">Blog</a></li> 
+        </ul> 
+        <div class="hamburger"> 
+          <span></span> 
+          <span></span> 
+          <span></span> 
+        </div> 
+      </nav> 
+  <header class="blog-header"><br><br><br> 
+    <h1>
+ 📰
+ AfriMentor Blog</h1> 
+    <p>Stories, insights, and innovations shaping education across Africa</p> 
+  </header> 
+ 
+  <main class="blog-container"> 
+    <article class="blog-post"> 
+      <h2>
+ 📶
+ Learning Without Internet: How Offline AI Is Changing Classrooms</h2> 
+      <p class="meta">By Team AfriMentor · August 2025</p> 
+      <p>In rural Cameroon, students are solving math problems with AI guidance—without ever 
+connecting to the internet. Here's how AfriMentor's offline-first architecture is making that 
+possible...</p> 
+      <a href="#">Read More</a> 
+    </article> 
+ 
+    <article class="blog-post"> 
+      <h2>
+ 🗣
+ Language Matters: Why Local Translation Is Key to Digital Inclusion</h2> 
+      <p class="meta">By Ndeh · July 2025</p> 
+      <p>From Fulfulde to Swahili, AfriMentor is bridging the language gap in education. This post 
+explores how local language support boosts comprehension and confidence...</p> 
+      <a href="#">Read More</a> 
+    </article> 
+ 
+    <article class="blog-post"> 
+      <h2>
+ 💼
+ Career Mentorship for the Next Generation</h2> 
+      <p class="meta">By AfriMentor Team · June 2025</p> 
+      <p>What does career guidance look like when tailored to African economies? Discover how 
+AfriMentor helps youth explore vocational paths and entrepreneurship...</p> 
+      <a href="#">Read More</a> 
+    </article> 
+  </main> 
+ 
+  <br><br><br> <footer class="fixed-bottom"> 
+    <p>&copy; 2025 AfriMentor. Built for Africa, by Africa.</p> 
+  </footer> 
+</body> 
+</html>
+<script>
+    const hamburger = document.querySelector('.hamburger'); 
+  const navLinks = document.querySelector('.nav-links'); 
+  hamburger.addEventListener('click', () => { 
+  navLinks.classList.toggle('active'); 
+  }); 
+  </script> 

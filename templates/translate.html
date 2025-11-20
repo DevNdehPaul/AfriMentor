@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>🌍 Language Bridge</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='translate.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='nav.css') }}"> 
+  <link rel="stylesheet" href="../static/Bootstrap/css/bootstrap.css"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <nav class="navbar fixed-top"> 
+        <div class="logo">
+       🌍
+       AfriMentor</div> 
+        <ul class="nav-links" style="list-style: none;"> 
+          <li><a href="/">Home</a></li> 
+          <li><a href="/features">Features</a></li>
+          <li><a href="/about">About Us</a></li>  
+          <li><a href="/blog">Blog</a></li> 
+        </ul> 
+        <div class="hamburger"> 
+          <span></span> 
+          <span></span> 
+          <span></span> 
+        </div> 
+      </nav> 
+<header><br><br><br>
+  <h1>🌍 Language Bridge</h1>
+  <p class="subtitle">Breaking barriers with translations into Yoruba, Swahili, Fulfulde & more</p>
+</header>
+
+<main>
+  <section class="form-box">
+    <form method="POST" enctype="multipart/form-data">
+      <label>Enter Text (optional):
+        <textarea name="input_text" placeholder="Paste lesson text here..."></textarea>
+      </label>
+
+      <label>Or upload image/PDF:
+        <input type="file" name="file" accept=".pdf,.png,.jpg,.jpeg">
+      </label>
+
+      <label>Translate into:
+        <select name="language">
+          <option>Yoruba</option>
+          <option>Swahili</option>
+          <option>Fulfulde</option>
+          <option>Hausa</option>
+          <option>Zulu</option>
+          <option>French</option>
+        </select>
+      </label>
+
+      <button type="submit">Translate</button>
+    </form>
+  </section>
+
+  {% if extracted_text %}
+  <section class="results">
+    <h2>📄 Extracted Text</h2>
+    <div class="output">{{ extracted_text }}</div>
+  </section>
+  {% endif %}
+
+  {% if translation %}
+  <section class="results">
+    <h2>🌐 Translation</h2>
+    <div class="output">{{ translation }}</div>
+  </section>
+  {% endif %}
+</main>
+
+<br><br><br> <footer class="fixed-bottom"> 
+    <p>&copy; 2025 AfriMentor. Built for Africa, by Africa.</p> 
+  </footer> 
+</body> 
+</html>
+<script>
+    const hamburger = document.querySelector('.hamburger'); 
+  const navLinks = document.querySelector('.nav-links'); 
+  hamburger.addEventListener('click', () => { 
+  navLinks.classList.toggle('active'); 
+  });
+  function startVoice() {
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SpeechRecognition){
+      alert("not supported")
+      return;
+    }
+    const recognition = new SpeechRecognition();
+    recognition.lang = 'en-US';
+    recognition.onresult = function(event) {
+      document.getElementById('question').value = event.results[0][0].transcript;
+    };
+    recognition.start();
+  } 
+  </script> 

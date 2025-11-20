@@ -1,0 +1,87 @@
+ 
+body { 
+    font-family: 'Segoe UI', sans-serif; 
+    margin: 0; 
+    padding: 0; 
+    background: #f9f9f9; 
+    color: #333; 
+  } 
+   
+  .navbar { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: #2e8b57; 
+    padding: 1rem 1.5rem; 
+    color: white; 
+  } 
+   
+  .navbar .logo { 
+    font-weight: bold; 
+    font-size: 1.2rem; 
+  } 
+   
+  .nav-links { 
+    list-style: none; 
+    display: flex; 
+    gap: 1rem; 
+  } 
+   
+  .nav-links li a { 
+    color: white; 
+    text-decoration: none; 
+    font-weight: 500; 
+  } 
+   
+  .tutor-header { 
+    background-color: #eaf5ea; 
+    padding: 2rem; 
+    text-align: center; 
+  } 
+   
+  .tutor-container { 
+    padding: 2rem; 
+    max-width: 800px; 
+    margin: auto; 
+  } 
+   
+  form { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 1rem; 
+  } 
+   
+  textarea { 
+    padding: 1rem; 
+    font-size: 1rem; 
+    border-radius: 8px; 
+    border: 1px solid #ccc; 
+  } 
+   
+  button { 
+    background-color: #2e8b57; 
+    color: white; 
+    border: none; 
+    padding: 0.8rem; 
+    font-size: 1rem; 
+    border-radius: 8px; 
+    cursor: pointer; 
+  } 
+   
+  button:hover { 
+    background-color: #246b45; 
+  } 
+   
+  .response { 
+    margin-top: 2rem; 
+    background: white; 
+    padding: 1.5rem; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
+  } 
+  footer { 
+    background: #2e8b57; 
+    color: white; 
+    text-align: center; 
+    padding: 1rem; 
+  } 

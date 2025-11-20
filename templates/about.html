@@ -1,0 +1,134 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+  <title>About | AfriMentor</title> 
+  <link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='nav.css') }}">
+  <link rel="stylesheet" href="../static/Bootstrap/css/bootstrap.css">  
+</head> 
+<body>
+  <nav class="navbar fixed-top"> 
+    <div class="logo">
+   🌍
+   AfriMentor</div> 
+    <ul class="nav-links" style="list-style: none;"> 
+      <li><a href="/">Home</a></li> 
+      <li><a href="/features">Features</a></li>
+      <li><a href="/about">About Us</a></li>  
+      <li><a href="/blog">Blog</a></li> 
+    </ul> 
+    <div class="hamburger"> 
+      <span></span> 
+      <span></span> 
+      <span></span> 
+    </div> 
+  </nav> 
+  <header><br><br><br>  
+    <h1>About AfriMentor</h1> 
+    <p>AI-Powered Learning for the Unconnected</p> 
+  </header> 
+ 
+  <section class="origin"> 
+    <h2 style="text-align: center;">
+ 🌱
+ Our Origin Story</h2> 
+    <p style="text-align: center;"> 
+      AfriMentor was born from a simple but urgent question:  
+      <em>“How can we bring quality education to every African child, even without 
+internet?”</em>   
+      In many rural communities, talented students are held back by poor connectivity, limited 
+resources, and a shortage of trained teachers.   
+      We set out to change that — blending AI innovation with local wisdom to create a learning 
+companion that works anywhere. 
+    </p> 
+  </section> 
+ 
+  <section class="problem"> 
+    <h2 style="text-align: center;">
+ 🚧
+ The Problem We Solve</h2> 
+    <ul> 
+      <li>
+ 📶
+ Limited or no internet access in rural areas</li> 
+      <li>
+ 📚
+ Shortage of qualified teachers and up-to-date learning materials</li> 
+      <li>
+ 🌍
+ Language barriers that exclude millions from quality education</li> 
+      <li>
+ 💼
+ Lack of career guidance tailored to African economies</li> 
+    </ul> 
+    <p> 
+      AfriMentor tackles these challenges head-on with an offline-first AI platform that stores 
+lessons locally, supports multiple African languages, and offers career mentoring rooted in 
+real-world opportunities. 
+    </p> 
+  </section> 
+ 
+  <section class="approach"> 
+    <h2 style="text-align: center;">
+ 🤖
+ Blending AI with Local Relevance</h2> 
+    <p style="text-align: center;"> 
+      Our system combines the intelligence of AI with culturally relevant content, local languages, 
+and community-driven knowledge.   
+      When internet is available, AfriMentor syncs with global AI models to refresh lessons and 
+expand its knowledge base.   
+      Offline, it continues to serve students with cached responses, local stories, and practical 
+skills training. 
+    </p> 
+  </section> 
+ 
+  <section class="team"> 
+    <h2 style="text-align: center;">
+ 👥
+ Our Team & Collaborators</h2> 
+    <p> 
+      AfriMentor is built by a passionate network of educators, developers, linguists, and 
+community leaders across Africa and beyond. 
+    </p> 
+    <ul> 
+      <li><strong>Educators:</strong> Designing relevant, engaging learning paths</li> 
+      <li><strong>Developers:</strong> Building resilient, offline-first technology</li> 
+      <li><strong>Linguists:</strong> Translating and localizing content</li> 
+      <li><strong>Community Leaders:</strong> Ensuring cultural fit and adoption</li> 
+    </ul> 
+  </section> 
+ 
+  <section class="values"> 
+    <h2 style="text-align: center;">
+ 💡
+ Our Values</h2> 
+    <ul> 
+      <li>
+ 🌍
+ Accessibility — Education for every child, everywhere</li> 
+      <li>
+ 🤝
+ Collaboration — Working with communities, not just for them</li> 
+      <li>
+ 📈
+ Empowerment — Equipping youth with skills for the future</li> 
+      <li>
+ 💬
+ Inclusivity — Supporting diverse languages and cultures</li> 
+    </ul> 
+  </section>
+ 
+  <br><br><br> <footer class="fixed-bottom"> 
+    <p>&copy; 2025 AfriMentor. Built for Africa, by Africa.</p> 
+  </footer> 
+</body> 
+</html>
+<script>
+  const hamburger = document.querySelector('.hamburger'); 
+const navLinks = document.querySelector('.nav-links'); 
+hamburger.addEventListener('click', () => { 
+navLinks.classList.toggle('active'); 
+}); 
+</script>

@@ -1,0 +1,75 @@
+/* General layout */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f6f8;
+    color: #333;
+  }
+  
+  header {
+    text-align: center;
+    padding: 20px;
+    background: #00796b;
+    color: white;
+  }
+  
+  main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    padding: 20px;
+  }
+  
+  .card {
+    background: white;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  button {
+    padding: 10px 16px;
+    background: #00796b;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 8px;
+    width: 100%;
+  }
+  
+  button:hover {
+    background: #009688;
+  }
+  
+  .file-list {
+    margin-top: 10px;
+    padding-left: 20px;
+  }
+  
+  .file-list li {
+    margin-bottom: 6px;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 12px;
+    background: #e0f2f1;
+    font-size: 14px;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 22px;
+    }
+    .card {
+      padding: 12px;
+    }
+    button {
+      font-size: 14px;
+      padding: 8px 12px;
+    }
+  }
+  

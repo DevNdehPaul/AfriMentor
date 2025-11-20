@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>African Youth Career Bot</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='career_navigator.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='nav.css') }}"> 
+  <link rel="stylesheet" href="../static/Bootstrap/css/bootstrap.css">
+</head>
+<body>
+    <nav class="navbar fixed-top"> 
+        <div class="logo">
+       🌍
+       AfriMentor</div> 
+        <ul class="nav-links" style="list-style: none;"> 
+          <li><a href="/">Home</a></li> 
+          <li><a href="/features">Features</a></li>
+          <li><a href="/about">About Us</a></li>  
+          <li><a href="/blog">Blog</a></li> 
+        </ul> 
+        <div class="hamburger"> 
+          <span></span> 
+          <span></span> 
+          <span></span> 
+        </div> 
+      </nav> 
+  <header><br><br><br>
+    <h1>🌍 African Youth Career & Venture Guide</h1>
+    <p class="subtitle">Job options • Training • Entrepreneurship</p>
+  </header>
+
+  <main>
+    <section class="form-box">
+      <form method="POST">
+        <label>Country
+          <input type="text" name="country" required>
+        </label>
+
+        <label>Education level
+          <select name="education">
+            <option>Secondary</option>
+            <option>TVET/Apprenticeship</option>
+            <option>Diploma</option>
+            <option>Bachelor</option>
+            <option>Postgraduate</option>
+          </select>
+        </label>
+
+        <label>Interests (comma separated)
+          <input type="text" name="interests" placeholder="e.g. farming, solar, design">
+        </label>
+
+        <label>Skills (comma separated)
+          <input type="text" name="skills" placeholder="e.g. sales, sewing, coding">
+        </label>
+
+        <label>Startup capital (USD)
+          <input type="number" name="capital" min="0" value="0">
+        </label>
+
+        <label>Internet access
+          <select name="internet">
+            <option value="yes">Yes</option>
+            <option value="no">No / Limited</option>
+          </select>
+        </label>
+
+        <button type="submit">Get Guidance</button>
+      </form>
+    </section>
+
+    {% if response %}
+    <section class="results">
+      <h2>✨ Your Personalized Guidance</h2>
+      <div class="response">{{ response }}</div>
+    </section>
+    {% endif %}
+  </main>
+  <br><br><br><footer class="fixed-bottom"> 
+    <p>&copy; 2025 AfriMentor. Built for Africa, by Africa.</p> 
+  </footer> 
+</body> 
+</html>
+<script>
+  const hamburger = document.querySelector('.hamburger'); 
+const navLinks = document.querySelector('.nav-links'); 
+hamburger.addEventListener('click', () => { 
+navLinks.classList.toggle('active'); 
+}); 
+</script>
