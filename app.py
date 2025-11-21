@@ -13,7 +13,8 @@ import requests
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
 # Use environment variable for API key (never hard-code secrets)
-client = OpenAI(api_key="YOUR_OPENAI_API_KEY")
+client = OpenAI(api_key="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")
+
 
 
 app = Flask(__name__)
@@ -252,4 +253,5 @@ def fetch_cloud():
         return {"status": "error", "message": str(e)}
 if __name__ == '__main__':
     init_db()
+
     app.run(debug=True)
