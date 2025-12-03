@@ -6,7 +6,56 @@
   <title>AfriMentor</title> 
   <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}"> 
   <link rel="stylesheet" href="{{ url_for('static', filename='nav.css') }}">
+  <link rel="stylesheet" href="../static/Fontawesome/fontawesome-free-6.7.2-web/css/all.css">
   <link rel="stylesheet" href="../static/Bootstrap/css/bootstrap.css">
+   <style>
+    .icon{
+    padding: 10px;
+    border-radius: 13px;
+    border: none;
+    color: white;
+    background-color: #6f42c1;
+}
+.icon{
+    padding: 10px;
+    border-radius: 13px;
+    border: none;
+    color: white;
+    background-color: rgba(163, 150, 150, 0.2);;
+    margin-right: 10px;
+}
+.icon1{
+    padding: 10px;
+    border-radius: 13px;
+    border: none;
+    color: white;
+    background-color: rgba(163, 150, 150, 0.2);;
+    margin-right: 10px;
+}
+button.btn1 {
+    width: 80%;
+    background-color: #353fc0;
+    margin-top: 10px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+.input {
+    background-color: black;
+    border: none;
+    margin-top: 8px;
+    width: 100%;
+    padding: 5px;
+}
+.input1 {
+    background-color: black;
+    border: none;
+    margin-top: 8px;
+    width: 100%;
+    padding: 5px;
+    font-weight: bolder;
+}
+  </style>
 </head> 
 <body> 
   <nav class="navbar fixed-top"> 
@@ -16,7 +65,7 @@
     <ul class="nav-links" style="list-style: none;"> 
       <li><a href="/">Home</a></li> 
       <li><a href="/features">Features</a></li>
-      <li><a href="/about">About Us</a></li>  
+      <li><a href="{{ url_for('homepage') }}#about">About Us</a></li>  
       <li><a href="/blog">Blog</a></li> 
     </ul> 
     <div class="hamburger"> 
@@ -31,16 +80,15 @@
  AfriMentor</h1> 
     <p style="text-align: center;">AI-Powered Learning for the Unconnected</p> 
   </header> 
-  <div class="container"><br><br><br>
+  <div class="container" id="about"><br><br><br>
   <div class="row">
     <div class="col-md-6"><img src="../static/Images/e-learning-1-sito-EN.jpg" alt="" class="img-fluid rounded">
     </div>
-    <div class="col-md-6"><br><br><br>
+    <div class="col-md-6"><br>
         <h2 style="text-align: center;">
      🚀
-     Our Mission</h2> 
-        <p style="text-align: center;">To empower every student, no matter where they live with the tools to learn, grow, and 
-    thrive.</p> 
+     Our Mission</h2>
+        <p style="text-align: center; margin-top: 10px;">AfriMentor is an education platform built for Africa that leverages technology to make learning more accessible and impactful, featuring an AI Tutor that delivers instant answers to learners’ questions while also offering curated resources, insightful blogs, and career guidance; designed to empower students, professionals, and lifelong learners alike, AfriMentor supports skill development, bridges gaps in educational access, and fosters a community of growth across the continent.</p> 
     </div>
   </div><br>
   <section class="features"> 
@@ -68,55 +116,49 @@
       </div> 
     </div>
   </section> 
-    <section class="impact"> 
-      <h2 style="text-align: center;">
-   🌱
-   Real Impact</h2> 
-      <p style="text-align: center;">Imagine a student in rural Cameroon solving algebra problems with AI guidance. A young 
-  entrepreneur in Kenya discovering local business ideas. AfriMentor isn’t just a tool—it’s a 
-  movement.</p> 
-    </section> 
-  
-    <section class="tech"> 
-      <h2 style="text-align: center;">
-   🔌
-   Built for the Real World</h2>
-      <ul> 
-        <li>Offline-first architecture using Python + SQLite</li> 
-        <li>Runs on Android & Raspberry Pi</li> 
-        <li>Bluetooth & Wi-Fi Direct syncing</li> 
-        <li>Voice input & text-to-speech</li> 
-        <li>Community-generated content</li> 
-      </ul> 
-    </section> 
-   
-   
-    <section class="cta"> 
-      <h2 style="text-align: center;">
-   🤝
-   Join the Mission</h2> 
-      <p>Whether you're an educator, developer, donor, or community leader—you can help shape 
-  the future of learning in Africa.</p>
-      <ul> 
-        <li>
-   🔧
-   Build with us</li> 
-        <li>
-   💬
-   Translate with us</li> 
-        <li>
-   📊
-   Pilot with us</li> 
-        <li>
-   💖
-   Donate to expand access</li> 
-      </ul> 
-    </section> 
-   
   </div>
-  <br><br><br> <footer class="fixed-bottom"> 
-    <p style="text-align: center;">&copy; 2025 AfriMentor. Built for Africa, by Africa.</p> 
-  </footer> 
+  <br><br><br> <footer class="footer">
+  <div class="container"><br>
+    <h1 class="text-white text-center">Contact</h1>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="container"><br>
+        <h3 class="text-white">Drop Me a Message</h3>
+      <p class="text-white">Need a Developer who's out of this world?   Send me a message and let's make it happen!</p>
+      <p class="text-white"><span class="fas fa-phone icon"></span> +237 673254504</p>
+      <p class="text-white"><span class="far fa-envelope icon"></span> paulndeh86@gmail.com</p>
+      <p class="text-white"><span class="fas fa-location-arrow icon"></span> Quatre Etage, Bonaberi, Douala</p>
+      </div>
+    </div>
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <div class="container">
+        <div class="card" style="background-color: rgba(163, 150, 150, 0.2);;"><br>
+          <div class="container">
+            <form action="" class="container">
+            <input type="text" placeholder="Name" class="input">
+            <input type="email" placeholder="Email" class="input">
+            <textarea name="" id="" placeholder="Message" class="input" rows="4"></textarea><br>
+            <div class="row">
+              <div class="col-2"></div>
+              <div class="col-8"><input type="submit" value="Send" class="input1 text-white"></div>
+              <div class="col-2"></div>
+            </div><br>
+          </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><br>
+  <hr style=" border: 0; border-top: 1px solid white;">
+  <div class="row">
+    <div class="col-md-4"><h3 class="text-white text-center">NdehDesigns</h3></div>
+    <div class="col-md-4"><p class="text-white text-center" style="margin-top: 8px;">2025-Fozil Studio, All rights reserved</p></div>
+    <div class="col-md-4"><div class="d-flex justify-content-center"><span class="fab fa-facebook text-white icon1"></span><span class="fab fa-instagram text-white icon1"></span><span class="fab fa-whatsapp text-white icon1"></span></div></div>
+  </div><br>
+  </div>
+
+</footer>
 </body> 
 </html>
 <script>

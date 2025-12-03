@@ -8,6 +8,54 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='nav.css') }}"> 
   <link rel="stylesheet" href="../static/Bootstrap/css/bootstrap.css"> 
   <link rel="stylesheet" href="../static/Fontawesome/fontawesome-free-6.7.2-web/css/all.css">
+  <style>
+    .icon{
+    padding: 10px;
+    border-radius: 13px;
+    border: none;
+    color: white;
+    background-color: #6f42c1;
+}
+.icon{
+    padding: 10px;
+    border-radius: 13px;
+    border: none;
+    color: white;
+    background-color: rgba(163, 150, 150, 0.2);;
+    margin-right: 10px;
+}
+.icon1{
+    padding: 10px;
+    border-radius: 13px;
+    border: none;
+    color: white;
+    background-color: rgba(163, 150, 150, 0.2);;
+    margin-right: 10px;
+}
+button.btn1 {
+    width: 80%;
+    background-color: #353fc0;
+    margin-top: 10px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+.input {
+    background-color: black;
+    border: none;
+    margin-top: 8px;
+    width: 100%;
+    padding: 5px;
+}
+.input1 {
+    background-color: black;
+    border: none;
+    margin-top: 8px;
+    width: 100%;
+    padding: 5px;
+    font-weight: bolder;
+}
+  </style>
 </head> 
 <body> 
     <nav class="navbar fixed-top"> 
@@ -17,7 +65,7 @@
         <ul class="nav-links" style="list-style: none;"> 
           <li><a href="/">Home</a></li> 
           <li><a href="/features">Features</a></li>
-          <li><a href="/about">About Us</a></li>  
+          <li><a href="{{ url_for('homepage') }}#about">About Us</a></li>  
           <li><a href="/blog">Blog</a></li> 
         </ul> 
         <div class="hamburger"> 
@@ -53,9 +101,48 @@
     {% endif %} 
   </main> 
  
-  <br><br><br> <footer class="fixed-bottom"> 
-    <p>&copy; 2025 AfriMentor. Built for Africa, by Africa.</p> 
-  </footer> 
+  <br><br><br> <footer class="footer">
+  <div class="container"><br>
+    <h1 class="text-white text-center">Contact</h1>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="container"><br>
+        <h3 class="text-white">Drop Me a Message</h3>
+      <p class="text-white">Need a Developer who's out of this world?   Send me a message and let's make it happen!</p>
+      <p class="text-white"><span class="fas fa-phone icon"></span> +237 673254504</p>
+      <p class="text-white"><span class="far fa-envelope icon"></span> paulndeh86@gmail.com</p>
+      <p class="text-white"><span class="fas fa-location-arrow icon"></span> Quatre Etage, Bonaberi, Douala</p>
+      </div>
+    </div>
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <div class="container">
+        <div class="card" style="background-color: rgba(163, 150, 150, 0.2);;"><br>
+          <div class="container">
+            <form action="" class="container">
+            <input type="text" placeholder="Name" class="input">
+            <input type="email" placeholder="Email" class="input">
+            <textarea name="" id="" placeholder="Message" class="input" rows="4"></textarea><br>
+            <div class="row">
+              <div class="col-2"></div>
+              <div class="col-8"><input type="submit" value="Send" class="input1 text-white"></div>
+              <div class="col-2"></div>
+            </div><br>
+          </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><br>
+  <hr style=" border: 0; border-top: 1px solid white;">
+  <div class="row">
+    <div class="col-md-4"><h3 class="text-white text-center">NdehDesigns</h3></div>
+    <div class="col-md-4"><p class="text-white text-center" style="margin-top: 8px;">2025-Fozil Studio, All rights reserved</p></div>
+    <div class="col-md-4"><div class="d-flex justify-content-center"><span class="fab fa-facebook text-white icon1"></span><span class="fab fa-instagram text-white icon1"></span><span class="fab fa-whatsapp text-white icon1"></span></div></div>
+  </div><br>
+  </div>
+
+</footer>
 </body> 
 </html>
 <script>
